@@ -6,8 +6,53 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Процентные ставки</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    Hello
+    <div class="name">Калькулятор ставок</div>
+    <div class="inputs">
+        <div class="time">
+            <div class="time-name">
+                Срок кредита
+            </div>
+            <div>
+                <input type="radio" id="up-to-60" value="1" name="time"
+                       checked>
+                <label for="up-to-60">До 60 мес.(вкл)</label>
+            </div>
+            <div>
+                <input type="radio" id="more-60-to-120" value="2" name="time">
+                <label for="more-60-to-120">Свыше 60 и до 120 мес.(вкл)</label>
+            </div>
+            <div>
+                <input type="radio" id="more-120-to-180" value="3" name="time">
+                <label for="more-120-to-180">Свыше 120 и до 180 мес.(не вкл)</label>
+            </div>
+            <div>
+                <input type="radio" id="only-180" value="4" name="time">
+                <label for="more-120-to-180">180 мес.</label>
+            </div>
+            <div>
+                <input type="radio" id="more-180-to-360" value="5" name="time">
+                <label for="more-180-to-360">Свыше 180 и до 360 мес.(вкл)</label>
+            </div>
+        </div>
+        <div class="pv number-input">
+            <label for="pv" class="time-name">ПВ</label>
+            <br>
+            <input type="number" name="pv" id="pv" placeholder="0-100%" required>
+        </div>
+        <div class="kv number-input">
+            <label for="kv" class="time-name">КВ</label>
+            <br>
+            <input type="number" name="kv" id="kv" placeholder="0-100%" required>
+        </div>
+        <div class="btn-outer">
+            <button class="compile">Посчитать</button>
+        </div>
+        <div class="result">Результат: -</div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
