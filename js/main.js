@@ -146,6 +146,14 @@ $(".compile").on("click", ()=>{
     else{
         $('#kv').css({'border' : '2px solid rgba(0, 106, 28, 0.27)', 'background-color' : 'white'});
     }
+    if(sum<=0){
+        $('.result').html("Ошибка: Сумма кредита не может быть меньше или равна 0");
+        $('#sum').css({'border' : '2px solid red', 'background-color' : 'rgb(255 200 200)'});
+        return 0;
+    }
+    else{
+        $('#sum').css({'border' : '2px solid rgba(0, 106, 28, 0.27)', 'background-color' : 'white'});
+    }
 
     let time_of_credit = time;
 
@@ -156,7 +164,6 @@ $(".compile").on("click", ()=>{
 
     let result = pv-kv;
     let mes = result/12/100;
-    console.log(mes);
     let credit = sum*(mes/(1-(1+mes)**(-1*time_of_credit)));
 
 
