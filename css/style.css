@@ -85,6 +85,10 @@ body{
 }
 .result{
     margin-top: 15px;
-    font-size: 23px;
+    font-size: 20px;
     font-family: Venryn-Medium;
+}
+.inner-result{
+    font-family: Venryn-Regular;
+    font-size: 18px;
 }

@@ -162,10 +162,12 @@ $(".compile").on("click", ()=>{
     let mes = result/12/100;
     if(sum>0){
         let credit = sum*(mes/(1-(1+mes)**(-1*time_of_credit)));
-        $('.result').html("Ставка: " + result.toFixed(2) + "% <br> Платёж: " + credit.toFixed(4) + " руб.");
+        let obsh = credit*time_of_credit;
+        let perep = obsh-sum;
+        $('.result').html("Ставка: <span class='inner-result'>" + result.toFixed(2) + "%</span> <br> Платёж: <span class='inner-result'>" + credit.toFixed(2) + " руб.</span> <br> Общая сумма:  <span class='inner-result'>" + obsh.toFixed(2) + " руб.</span><br> Переплата:  <span class='inner-result'>" + perep.toFixed(2) + " руб.</span>");
     }
     else{
-        $('.result').html("Ставка: " + result.toFixed(2) + "%");
+        $('.result').html("Ставка: <span class='inner-result'>" + result.toFixed(2) + "%</span>");
     }
 
 
