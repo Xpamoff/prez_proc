@@ -1,3 +1,9 @@
+@media screen and (max-width: 340px){
+    .inputs{
+        border-radius: 0!important;
+    }
+}
+
 @font-face {
     src: url("../assets/fonts/VenrynSans-Medium.ttf");
     font-family: Venryn-Medium;

@@ -138,34 +138,35 @@ $(".compile").on("click", ()=>{
     else{
         $('#pv').css({'border' : '2px solid rgba(0, 106, 28, 0.27)', 'background-color' : 'white'});
     }
-    if(kv!=4&&kv!=4.5&&kv!=5&&kv!=7&&kv!=10){
-        $('.result').html("Ошибка: КВ может принимать только значения: 4, 4.5, 5, 7, 10");
+    if(kv&&kv!=4&&kv!=4.5&&kv!=5&&kv!=7&&kv!=10&&kv!=0){
+        $('.result').html("Ошибка: КВ может принимать только значения: 0, 4, 4.5, 5, 7, 10");
         $('#kv').css({'border' : '2px solid red', 'background-color' : 'rgb(255 200 200)'});
         return 0;
     }
     else{
         $('#kv').css({'border' : '2px solid rgba(0, 106, 28, 0.27)', 'background-color' : 'white'});
     }
-    if(sum<=0){
-        $('.result').html("Ошибка: Сумма кредита не может быть меньше или равна 0");
-        $('#sum').css({'border' : '2px solid red', 'background-color' : 'rgb(255 200 200)'});
-        return 0;
-    }
-    else{
-        $('#sum').css({'border' : '2px solid rgba(0, 106, 28, 0.27)', 'background-color' : 'white'});
-    }
 
     let time_of_credit = time;
 
     time = time_definer(time);
     pv = pv_definer(pv, time);
-    kv = kv_definer(kv, time);
-
+    if(kv>0){
+        kv = kv_definer(kv, time);
+    }
+    else{
+        kv = 0;
+    }
 
     let result = pv-kv;
     let mes = result/12/100;
-    let credit = sum*(mes/(1-(1+mes)**(-1*time_of_credit)));
+    if(sum>0){
+        let credit = sum*(mes/(1-(1+mes)**(-1*time_of_credit)));
+        $('.result').html("Ставка: " + result.toFixed(2) + "% <br> Платёж: " + credit.toFixed(4) + " руб.");
+    }
+    else{
+        $('.result').html("Ставка: " + result.toFixed(2) + "%");
+    }
 
 
-    $('.result').html("Ставка: " + result.toFixed(2) + "% <br> Платёж: " + credit.toFixed(4) + " руб.");
 })

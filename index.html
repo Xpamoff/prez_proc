@@ -12,24 +12,24 @@
     <div class="name">Калькулятор ставок</div>
     <div class="inputs">
         <div class="time number-input">
-            <label for="time" class="time-name">Срок кредита</label>
+            <label for="time" class="time-name">Срок кредита <span style="color: red">*</span></label>
             <br>
             <input type="number" name="time" id="time" placeholder="1-360 мес." required>
         </div>
         <div class="pv number-input">
-            <label for="pv" class="time-name">ПВ</label>
+            <label for="pv" class="time-name">ПВ <span style="color: red">*</span></label>
             <br>
-            <input type="number" name="pv" id="pv" placeholder="0-100%" required>
+            <input type="number" name="pv" id="pv" placeholder="15-100%" required>
         </div>
         <div class="kv number-input">
             <label for="kv" class="time-name">КВ</label>
             <br>
-            <input type="number" name="kv" id="kv" placeholder="0-100%" required>
+            <input type="number" name="kv" id="kv" placeholder="0-10%">
         </div>
         <div class="sum number-input">
             <label for="sum" class="time-name">Сумма кредита</label>
             <br>
-            <input type="number" name="sum" id="sum" placeholder="1.000.000 руб." required>
+            <input type="number" name="sum" id="sum" placeholder="1.000.000 руб.">
         </div>
         <div class="btn-outer">
             <button class="compile">Посчитать</button>
