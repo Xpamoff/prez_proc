@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Процентные ставки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/back_btn.css">
+</head>
+<body>
+    <div class="back">
+        <button id="go_back">Назад</button>
+    </div>
+    <div class="name">Комиссия от стоимости объекта при кв 10%</div>
+    <div class="inputs">
+        <div class="time number-input">
+            <label for="time" class="time-name">Срок кредита <span style="color: red">*</span></label>
+            <br>
+            <input type="number" name="time" id="time" placeholder="1-360 мес." required>
+        </div>
+        <div class="pv number-input">
+            <label for="pv" class="time-name">ПВ <span style="color: red">*</span></label>
+            <br>
+            <input type="number" name="pv" id="pv" placeholder="15-100%" required>
+        </div>
+        <div class="sum number-input">
+            <label for="sum" class="time-name">Сумма кредита</label>
+            <br>
+            <input type="number" name="sum" id="sum" placeholder="1.000.000 руб.">
+        </div>
+        <div class="children number-input">
+            <label for="podd" class="time-name child-label">Гос поддержка</label>
+            <input type="radio" name="child" id="podd" value="podd" checked>
+        </div>
+        <div class="children number-input">
+            <label for="child" class="time-name child-label">Детская ипотека</label>
+            <input type="radio" name="child" id="child" value="child">
+        </div>
+
+        <div class="btn-outer">
+            <button class="compile">Посчитать</button>
+        </div>
+        <div class="result">Результат: <span class="inner-result">-</span></div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/back_btn.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/object.js"></script>
+</body>
+</html>

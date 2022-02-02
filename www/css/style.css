@@ -1,0 +1,112 @@
+@media screen and (max-width: 340px){
+    .inputs{
+        border-radius: 0!important;
+    }
+}
+
+@font-face {
+    src: url("../assets/fonts/VenrynSans-Medium.ttf");
+    font-family: Venryn-Medium;
+}
+@font-face {
+    src: url("../assets/fonts/VenrynSans-Regular.ttf");
+    font-family: Venryn-Regular;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Venryn-Regular;
+}
+input{
+    outline: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    font-family: Venryn-Medium;
+    font-size: 25px;
+    text-align: center;
+}
+.inputs{
+    width: 300px;
+    background-color: rgba(0, 106, 28, 0.13);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.time{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.time-name{
+    font-family: Venryn-Medium;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.number-input{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.number-input input{
+    border: 2px solid rgba(0, 106, 28, 0.27);
+    border-radius: 5px;
+    width: 80%;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+::placeholder{
+    font-size: 18px;
+}
+.compile{
+    margin-top: 20px;
+    border: 2px solid rgba(0, 106, 28, 0.27);
+    border-radius: 5px;
+    width: 80%;
+    height: 45px;
+    background-color: rgba(0, 106, 28, 0.13);
+    font-size: 20px;
+    font-family: Venryn-Medium;
+    transition: .5s;
+}
+.compile:hover{
+    background-color: rgba(0, 106, 28, 0.27);
+    color: white;
+}
+.result{
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: Venryn-Medium;
+}
+.inner-result{
+    font-family: Venryn-Regular;
+    font-size: 18px;
+}
+.child-label{
+    margin-bottom: 0 !important;
+}
+#child{
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 10px;
+}
+#podd{
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 10px;
+}
+.children{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

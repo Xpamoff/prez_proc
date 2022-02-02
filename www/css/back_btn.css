@@ -1,0 +1,22 @@
+#go_back{
+    margin-top: 0 !important;
+    border: 2px solid rgba(0, 106, 28, 0.27);
+    border-radius: 5px;
+    width: auto !important;
+    height: auto !important;
+    background-color: rgba(0, 106, 28, 0.13);
+    font-size: 20px;
+    font-family: Venryn-Medium;
+    transition: .5s;
+}
+.back{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    margin-bottom: 20px;
+}
+@media screen and (max-height: 800px) {
+    .name{
+        margin-top: 200px;
+    }
+}
